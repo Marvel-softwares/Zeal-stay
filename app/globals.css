@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --secondary-color: #5354f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root:has(.no-doc-scroll) {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  --bg-opacity: 1;
+  background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrolling {
+  pointer-events: none !important;
+}
+
+.scroll::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+
+.scroll:hover::-webkit-scrollbar-thumb,
+.scroll:hover::-webkit-scrollbar-track {
+  visibility: visible;
+}
+
+.scroll-hidden::-webkit-scrollbar,
+.scroll-hidden ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-hidden::-webkit-scrollbar-thumb,
+.scroll-hidden ::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scroll-hidden::-webkit-scrollbar-track,
+.scroll-hidden ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* scroll bar ends */
+
+/* calendly margins removal */
+.calendly-inline-widget * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

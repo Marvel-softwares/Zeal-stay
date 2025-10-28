@@ -24,7 +24,7 @@ export default function Banner() {
         <div className="relative">
           <div className="flex  flex-col-reverse lg:flex-row lg:items-center  pb-10 md:pt-16 md:pb-20 text-white">
             <div className="relative lg:w-5/12  max-w-lg mx-auto lg:max-w-none text-left">
-              <h1 className="text-center lg:text-start font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mt-4 lg:mt-0">
+              <h1 className="text-center lg:text-start font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight my-6 lg:my-0">
                 The
                 <span className="text-sec-text"> Smarter</span> way to <br />{" "}
                 Get

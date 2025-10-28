@@ -16,7 +16,7 @@ const RotatingTextInput = () => {
     "Kill Double Bookings",
     "Multiply Profits",
     "Reduce Dependency on OTAs",
-    "Lifetime Free Channel Manager",
+  
   ];
   const [index, setIndex] = useState(0);
 

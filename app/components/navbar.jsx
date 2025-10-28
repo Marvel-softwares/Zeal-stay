@@ -15,12 +15,21 @@ const Header = ({ logoLink, links, className }) => {
   };
 
   const defaultLinks = [
-    <div key={1} className="flex flex-col items-center lg:inline-block text-white">
+    <div
+      key={1}
+      className="flex flex-col items-center lg:inline-block text-white"
+    >
       <Link
         href="/#testimonials"
         className="text-lg my-2 lg:text-base lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-sec-text hover:text-sec-text focus:text-sec-text"
       >
         Testimonials
+      </Link>
+      <Link
+        href="/ad-tutorial"
+        className="text-lg my-2 lg:text-base lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-sec-text hover:text-sec-text focus:text-sec-text"
+      >
+        Ad Tutorial
       </Link>
       <Link
         href="/#services"
@@ -65,7 +74,7 @@ const Header = ({ logoLink, links, className }) => {
         alt="logo"
         className="w-10 "
       />
-     eal Stay
+      eal Stay
     </a>
   );
 

@@ -1,6 +1,7 @@
 import Navbar from "./navbar";
 import CalendlyLink from "./calendlyLink";
 import AnimatedInput from "./animatedInput";
+import TrustedHostsTicker from "./hostTicker";
 // import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 
 // const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
@@ -18,7 +19,7 @@ import AnimatedInput from "./animatedInput";
 export default function Banner() {
   return (
     <div className="bg-gradient-to-r from-[#02070f] via-[#131b2d] to-[#28284b]">
-      <div className="pt-8 w-11/12 lg:w-10/12 mx-auto min-h-screen">
+      <div className="pt-4 w-11/12 lg:w-10/12 mx-auto min-h-screen">
         <Navbar roundedHeaderButton={true} />
         <div className="relative">
           <div className="flex  flex-col-reverse lg:flex-row lg:items-center  pb-10 md:pt-16 md:pb-20 text-white">
@@ -35,18 +36,11 @@ export default function Banner() {
               </p>
 
               <AnimatedInput />
-              <div className="mt-12 lg:mt-20">
+              <div className="mt-12 lg:mt-24">
                 <p className="uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500">
                   Our TRUSTED HOSTS
                 </p>
-                {/* <img
-                src={"/images/customers-logo-strip.png"}
-                alt="Our Customers"
-                className="mt-4 w-full lg:pr-16 xl:pr-32 opacity-50"
-              /> */}
-                <span className="text-xl lg:text-3xl font-semibold opacity-25">
-                  APPLE-TREE HOSPITALITY
-                </span>
+                <TrustedHostsTicker />
               </div>
             </div>
             <div className="relative mt-8 lg:mt-0 flex-1 flex flex-col justify-center lg:self-start">

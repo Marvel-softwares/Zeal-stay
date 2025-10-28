@@ -13,7 +13,7 @@ const steps = [
   {
     heading: "Launch",
     description:
-      "Approve ads and launch campaigns within 7 days of our strategy call.",
+      "Approve ads and launch campaigns within 14 days of our strategy call.",
   },
 ];
 

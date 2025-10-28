@@ -17,7 +17,7 @@ const Header = ({ logoLink, links, className }) => {
   const defaultLinks = [
     <div
       key={1}
-      className="flex flex-col items-center lg:inline-block text-white"
+      className="flex flex-col items-center lg:inline-block text-black lg:text-white"
     >
       <Link
         href="/#testimonials"
@@ -64,7 +64,7 @@ const Header = ({ logoLink, links, className }) => {
   const defaultLogoLink = (
     <a
       href="/"
-      className="flex items-end  font-black border-b-0 text-2xl ml-0 text-white"
+      className="flex items-end  font-black border-b-0 text-2xl ml-0 "
     >
       <Image
         src={"/logo.png"}
@@ -101,13 +101,13 @@ const Header = ({ logoLink, links, className }) => {
               ? { x: 0, display: "block" }
               : { x: "150%", display: "none" }
           }
-          className="fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white z-10"
+          className="fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg  bg-white z-10"
         >
           <div className="">{links}</div>
         </motion.nav>
         <button
           onClick={toggleNavbar}
-          className={`lg:hidden  z-20 focus:outline-none hover:text-sec-text transition duration-300 ${
+          className={`lg:hidden  z-20 focus:outline-none text-sec-text transition duration-300 ${
             showNavLinks ? "open" : "closed"
           }`}
         >

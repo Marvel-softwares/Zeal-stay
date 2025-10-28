@@ -19,7 +19,7 @@ const TrustedHostsTicker = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">        
+      <div className="w-11/12 lg:max-w-7xl mx-auto px-4">        
         <div className="relative">
           {/* Gradient overlays for smooth fade effect */}
           {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />

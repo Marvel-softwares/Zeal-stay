@@ -8,20 +8,20 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto py-20 ">
         <div className="flex items-center justify-center flex-col px-8">
           <div className="flex items-center justify-center md:justify-start">
-           <a
-                 href="/"
-                 className="flex items-end  font-black border-b-0 text-2xl ml-0 text-white"
-               >
-                 <Image
-                   src={"/logo.png"}
-                   quality={100}
-                   width={50}
-                   height={50}
-                   alt="logo"
-                   className="w-10 "
-                 />
-                eal Stay
-               </a>
+            <a
+              href="/"
+              className="flex items-end  font-black border-b-0 text-2xl ml-0 text-white"
+            >
+              <Image
+                src={"/logo.png"}
+                quality={100}
+                width={50}
+                height={50}
+                alt="logo"
+                className="w-10 "
+              />
+              eal Stay
+            </a>
           </div>
 
           <div className="mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row">
@@ -33,13 +33,13 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="/#services"
               className="border-b-2 border-transparent hover:text-gray-300 focus:text-gray-300 hover:border-gray-300 focus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4"
             >
               Services
             </a>
             <a
-              href="#"
+              href="/#testimonials"
               className="border-b-2 border-transparent hover:text-gray-300 focus:text-gray-300 hover:border-gray-300 focus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4"
             >
               Testimonials
@@ -58,9 +58,18 @@ export default function Footer() {
             </a>
           </div>
 
+          <div className="mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row">
+            <a
+              href="mailto:zealmedia07@gmail.com"
+              className="cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4"
+            >
+              Email: zealmedia07@gmail.com
+            </a>
+          </div>
+
           <div className="mt-10">
             <a
-              href="https://www.facebook.com/profile.php?id=61580268795965"
+              href="https://www.facebook.com/p/Zeal-Stay-100094757943639/"
               className="cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4"
             >
               <Image
@@ -72,7 +81,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://www.instagram.com/kings_furniture2025/"
+              href="https://www.instagram.com/zealstay/"
               className="cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4"
             >
               <Image
@@ -84,7 +93,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://wa.me/9866327786?text=Hi,%0AI%20am%20interested%20in%20your%20furniture%20collection.%0AI%20would%20like%20to%20know%20more%20about:%20________."
+              href="https://wa.me/9168986282?text=Hi,%0AI%20am%20interested%20in%20your%20services.%0AI%20would%20like%20to%20know%20more%20about:%20________."
               className="cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4"
             >
               <Image

@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "npmConfig": {
+    "legacy-peer-deps": true
+  },
   "dependencies": {
     "@next/third-parties": "^15.2.1",
     "antd": "^5.22.5",

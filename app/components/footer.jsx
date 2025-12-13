@@ -13,14 +13,13 @@ export default function Footer() {
               className="flex items-end  font-black border-b-0 text-2xl ml-0 text-white"
             >
               <Image
-                src={"/logo.png"}
+                src={"/logo3.svg"}
                 quality={100}
-                width={50}
-                height={50}
+                width={350}
+                height={350}
                 alt="logo"
-                className="w-10 "
+                className="w-56 lg:w-96 "
               />
-              eal Stay
             </a>
           </div>
 
@@ -63,7 +62,7 @@ export default function Footer() {
               href="mailto:zealmedia07@gmail.com"
               className="cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4"
             >
-              Email: zealmedia07@gmail.com
+              Email: info@stayadvertising.com
             </a>
           </div>
 
@@ -107,7 +106,7 @@ export default function Footer() {
           </div>
 
           <p className="text-center mt-10 font-medium tracking-wide text-sm text-gray-600">
-            &copy; 2025 Zeal stay. All rights reserved.
+            &copy; 2025 Stay Advertising. All rights reserved.
           </p>
         </div>
       </div>

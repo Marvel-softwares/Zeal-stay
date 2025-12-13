@@ -17,7 +17,7 @@ const Header = ({ logoLink, links, className }) => {
   const defaultLinks = [
     <div
       key={1}
-      className="flex flex-col items-center lg:inline-block text-black lg:text-white"
+      className="flex flex-col lg:flex-row items-center text-black lg:text-white"
     >
       <Link
         href="/#testimonials"
@@ -25,12 +25,12 @@ const Header = ({ logoLink, links, className }) => {
       >
         Testimonials
       </Link>
-      <Link
+      {/* <Link
         href="/ad-tutorial"
         className="text-lg my-2 lg:text-base lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-sec-text hover:text-sec-text focus:text-sec-text"
       >
         Ad Tutorial
-      </Link>
+      </Link> */}
       <Link
         href="/#services"
         className="text-lg my-2 lg:text-base lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-sec-text hover:text-sec-text focus:text-sec-text"
@@ -50,12 +50,24 @@ const Header = ({ logoLink, links, className }) => {
         FAQs
       </Link>
 
-      <Link href={"/schedule-call"}>
-        {" "}
-        <button
-          className={`text-lg my-2 lg:text-base lg:mx-0 px-8 py-3  bg-sec-text text-gray-100 hover:bg-sec-text/[0.9]  hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full font-semibold`}
-        >
-          Schedule a Call
+      <Link href="/schedule-call">
+        <button className="flex items-center gap-3 text-lg my-2 lg:text-base lg:mx-0 px-4 py-3 bg-[#242424] text-gray-100 hover:bg-sec-text/90 hover:text-gray-200 border-b-0 rounded-full font-semibold">
+          Get Your Custom Strategy
+          <span className="flex items-center justify-center w-6 h-6 bg-sec-text rounded-full transition-transform duration-300 group-hover:translate-x-1">
+            <svg
+              className="w-5 h-5 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </span>
         </button>
       </Link>
     </div>,
@@ -67,14 +79,13 @@ const Header = ({ logoLink, links, className }) => {
       className="flex items-end  font-black border-b-0 text-2xl ml-0 "
     >
       <Image
-        src={"/logo.png"}
+        src={"/logo3.svg"}
         quality={100}
-        width={50}
-        height={50}
+        width={350}
+        height={350}
         alt="logo"
-        className="w-10 "
+        className="w-56 lg:w-96 "
       />
-      eal Stay
     </a>
   );
 
@@ -83,16 +94,14 @@ const Header = ({ logoLink, links, className }) => {
 
   return (
     <header
-      className={`flex justify-between items-center max-w-screen-xl mx-auto ${
-        className || "header-light"
-      } `}
+      className={`flex justify-between items-center max-w-screen-xl mx-auto header-light  py-4 lg:py-2 border-b border-b-gray-900 lg:border-b-0`}
     >
       <nav className="hidden lg:flex flex-1 justify-between items-center">
         {logoLink}
         {links}
       </nav>
 
-      <div className="flex flex-1 items-center justify-between lg:hidden">
+      <div className="flex flex-1 items-center justify-between lg:hidden px-2">
         {logoLink}
         <motion.nav
           initial={{ x: "150%", display: "none" }}

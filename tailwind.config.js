@@ -16,7 +16,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       "pri-text": "#3b3b3b",
-      "sec-text": "#5354f3",
+      "sec-text": "#FDDA0D",
       black: "#000",
       white: "#fff",
 

@@ -1,58 +1,84 @@
-"use client";
-import { motion } from 'framer-motion';
+"use client"
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 
-const TrustedHostsTicker = () => {
-  // Your trusted hosts - add as many as you need
-  const hosts = [
-    "ZOONDUB",
-    "RIVERSIDE RESORT",
-    "VILLAZIO",
-    "RETROFUSION",
-    "APPLE-TREE HOSPITALITY",
-    "MAYUR VILLA",
-    "BACHI'S NEST",
-    "NEVILLES VILLA",
+export default function TrustedHostsTicker() {
+  const controls = useAnimationControls();
+  const clients = [
+    { id: 1, name: "Zoondub", logoUrl: "/clients/Zoondub.png" },
+    { id: 2, name: "Mayur", logoUrl: "/clients/Mayur.png" },
+    { id: 3, name: "Nevilles", logoUrl: "/clients/Nevilles.png" },
+    { id: 4, name: "Retrofusion", logoUrl: "/clients/Retrofusion.png" },
+    { id: 5, name: "Villazio", logoUrl: "/clients/Villazio.png" },
+    { id: 6, name: "Bachis", logoUrl: "/clients/Bachis.png" },
+    { id: 7, name: "Millionaires", logoUrl: "/clients/Millionaires.png" },
   ];
 
-  // Duplicate the array multiple times for seamless loop
-  const duplicatedHosts = [...hosts, ...hosts, ...hosts];
+  // Speeds (edit these)
+  const NORMAL_SPEED = 20; // seconds
+  const SLOW_SPEED = 50; // seconds
+
+  // Start normal speed on mount
+  useEffect(() => {
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        duration: NORMAL_SPEED,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  }, []);
+
+  const setSpeed = (duration) => {
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        duration,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  };
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="w-11/12 lg:max-w-7xl mx-auto px-4">        
-        <div className="relative">
-          {/* Gradient overlays for smooth fade effect */}
-          {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10" /> */}
-          
-          {/* Animated ticker */}
-          <motion.div
-            className="flex gap-12"
-            animate={{
-              x: ["0%", "-33.333%"],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 20,
-                ease: "linear",
-              },
-            }}
+    <div
+      className="relative overflow-hidden"
+      // Desktop slow down
+      onMouseEnter={() => setSpeed(SLOW_SPEED)}
+      onMouseLeave={() => setSpeed(NORMAL_SPEED)}
+      // Mobile slow down
+      onTouchStart={() => setSpeed(SLOW_SPEED)}
+      onTouchEnd={() => setSpeed(NORMAL_SPEED)}
+    >
+      <motion.div className="flex gap-3 lg:gap-10" animate={controls}>
+        {/* First set of logos */}
+        {clients.map((logo, idx) => (
+          <div
+            key={`first-${idx}`}
+            className="flex items-center justify-center min-w-[150px]"
           >
-            {duplicatedHosts.map((host, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 text-2xl md:text-2xl lg:text-3xl font-bold text-gray-600/50 tracking-wider whitespace-nowrap hover:text-slate-500/60 transition-colors duration-300"
-              >
-                {host}
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
+            <img
+              src={logo.logoUrl}
+              alt={logo.name}
+              className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition"
+            />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {clients.map((logo, idx) => (
+          <div
+            key={`second-${idx}`}
+            className="flex items-center justify-center min-w-[150px]"
+          >
+            <img
+              src={logo.logoUrl}
+              alt={logo.name}
+              className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition"
+            />
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
-};
-
-export default TrustedHostsTicker;
+}

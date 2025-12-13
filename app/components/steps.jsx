@@ -19,7 +19,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <div className="bg-gradient-to-t from-[#02070f] to-[#131b2d] ">
+    <div className="bg-black">
       <div className="relative  w-11/12 lg:w-10/12 mx-auto py-12 ">
         <div
           id="steps"

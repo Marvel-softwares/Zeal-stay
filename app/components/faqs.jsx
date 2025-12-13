@@ -75,7 +75,7 @@ const FAQS = () => {
   const handleRotate = (idx) => (openTab === idx ? "rotate-180" : "");
 
   return (
-    <div className="bg-gradient-to-t from-[#02070f] to-[#131b2d]">
+    <div className="bg-black">
       <div id="faqs" className="w-11/12 lg:w-8/12 mx-auto py-5 lg:py-10 ">
         <div className="text-center">
           <h2 className=" text-4xl sm:text-5xl font-black text-center mb-4">
@@ -89,12 +89,12 @@ const FAQS = () => {
 
         <ul className="flex flex-col">
           {faqs.map((item, idx) => (
-            <li key={idx} className="bg-gray-100 my-2 shadow-lg">
+            <li key={idx} className="text-white my-2 shadow-lg">
               <h2
                 onClick={() => handleClick(idx + 1)}
                 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
               >
-                <span className="lg:text-xl text-black">{item.question}</span>
+                <span className="lg:text-xl hover:text-sec-text">{item.question}</span>
                 <svg
                   className={`fill-current text-sec-text h-6 w-6 transform transition-transform duration-500 ${handleRotate(
                     idx + 1
@@ -108,7 +108,7 @@ const FAQS = () => {
                 className="border-l-4 border-sec-text overflow-hidden duration-500 transition-all"
                 style={{ maxHeight: openTab === idx + 1 ? "400px" : "0" }}
               >
-                <div className="p-3 text-gray-900 text-sm lg:text-base">
+                <div className="p-3 text-gray-500 text-sm lg:text-base">
                   {item.answer}
                 </div>
               </div>

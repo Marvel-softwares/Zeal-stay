@@ -50,16 +50,16 @@ export default function TestimonialSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-[#02070f] to-[#131b2d] flex items-center justify-center py-8 text-white">
+    <div className="min-h-screen bg-black flex items-center justify-center py-8 text-white">
       <div className="w-12/12 lg:w-9/12 mx-auto rounded-2xl p-8 lg:p-12 shadow-sm">
         {/* Heading - Visible on mobile, hidden on desktop */}
-        <div className="lg:hidden mb-8">
+        <div className="lg:hidden mb-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Real Success Stories
           </h2>
           <p className="text-gray-500 text-lg mb-4">
             What our clients say about{" "}
-            <span className="text-sec-text font-medium">Zeal Stay</span>
+            <span className="text-sec-text font-medium">Stay Advertising</span>
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export default function TestimonialSection() {
               </h2>
               <p className="text-gray-500 text-lg mb-8">
                 What our clients say about{" "}
-                <span className="text-sec-text font-medium">Zeal Stay</span>
+                <span className="text-sec-text font-medium">Stay Advertising</span>
               </p>
             </div>
 
@@ -218,7 +218,7 @@ export default function TestimonialSection() {
                   <p className="text-gray-200 font-semibold text-lg">
                     {testimonials[currentSlide].author}
                   </p>
-                  <p className="text-indigo-600 font-medium">
+                  <p className="text-sec-text font-medium">
                     {testimonials[currentSlide].role}
                   </p>
                 </div>

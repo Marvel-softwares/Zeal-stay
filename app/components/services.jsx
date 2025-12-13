@@ -21,7 +21,7 @@ const cards = [
     imageSrc: "/images/services/marketing.svg",
     title: "Direct Booking Ads (Meta-Focused)",
     description:
-      "We run professionally managed Facebook & Instagram ads that put your property in front of high-intent travelers — and bring booking-ready inquiries directly to you.",
+      "We run professionally managed Facebook & Instagram ads that put your property in front of high-intent travelers  and bring booking-ready inquiries directly to you.",
     url: "https://google.com",
   },
   // {
@@ -35,7 +35,7 @@ const cards = [
     imageSrc: "/images/services/automation.svg",
     title: "Smart CRM & Automation",
     description:
-      "Turn inquiries into confirmed bookings — fast. Our CRM system makes sure no enquiry slips through. Track every inquiry, get instant alerts, and follow up with ease — all in one place.",
+      "Turn inquiries into confirmed bookings fast. Our CRM system makes sure no enquiry slips through. Track every inquiry, get instant alerts, and follow up with ease all in one place.",
     url: "https://timerse.com",
   },
 
@@ -43,14 +43,14 @@ const cards = [
     imageSrc: "/images/services/rocket.svg",
     title: "Full-Service Setup & Strategy",
     description:
-      "From collecting photos, to running ads, to delivering enquiries— we handle the setup, strategy, and support. All you do is talk to qualified guests.",
+      "From collecting photos, to running ads, to delivering enquiries we handle the setup, strategy, and support. All you do is talk to qualified guests.",
     url: "https://reddit.com",
   },
 ];
 
 export default function Services() {
   return (
-    <div className="bg-gradient-to-r from-[#02070f] to-[#131b2d] ">
+    <div className="bg-black">
       <div className="relative w-11/12 lg:w-10/12 mx-auto py-12 ">
         <h2
           id="services"
@@ -66,13 +66,13 @@ export default function Services() {
           {cards.map((card, i) => (
             <div key={i} className="lg:w-1/3 max-w-xs">
               <div className="flex flex-col items-center text-center h-full mx-4 px-4 py-6 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105">
-                <div className="text-center rounded-full p-2 bg-gray-100">
+                <div className="text-center rounded-full p-3 bg-[#242424]">
                   <Image
                     src={card.imageSrc}
                     height={32}
                     width={32}
                     alt={card.title}
-                    className="w-10 h-10"
+                    className="w-8 8-10"
                   />
                 </div>
 

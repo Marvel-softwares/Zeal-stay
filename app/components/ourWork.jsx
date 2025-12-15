@@ -82,7 +82,7 @@ export default function ContentPreviewSection() {
             Content Preview
           </h2>
           <p className="text-gray-400 text-lg">
-            In collaboration with talented content creators & hidden gem stays!
+            In collaboration with talented content creators & stayadvertising!
           </p>
         </div>
 

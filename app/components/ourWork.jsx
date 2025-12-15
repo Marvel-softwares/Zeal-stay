@@ -3,12 +3,13 @@ import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+// Dynamically import ReactPlayer to avoid SSR issues
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function ContentPreviewSection() {
   const sliderRef = useRef(null);
-  const [playingVideo, setPlayingVideo] = useState(null);
-  const videoRefs = useRef({});
 
   const content = [
     {
@@ -44,7 +45,6 @@ export default function ContentPreviewSection() {
     centerPadding: "0px",
     arrows: true,
     responsive: [
-     
       {
         breakpoint: 1024,
         settings: {
@@ -87,19 +87,26 @@ export default function ContentPreviewSection() {
         </div>
 
         {/* Slider Container */}
-        <div className="w-10/12 mx-auto relative px-12">
+        <div className="w-full lg:w-10/12 mx-auto relative lg:px-12">
           {/* Slider */}
           <Slider ref={sliderRef} {...settings}>
             {content.map((item) => (
               <div key={item.id} className="px-2">
-                <div className="cursor-pointer rounded-2xl overflow-hidden mx-auto" style={{ width: '70%' }}>
+                <div className="cursor-pointer rounded-2xl overflow-hidden mx-auto aspect-[9/16]" style={{ width: '70%' }}>
                   <ReactPlayer
+                    url={item.src}
                     controls={true}
                     width="100%"
                     height="100%"
-                    url={"/ourWork/1.mp4"}
-                    style={{ borderRadius: '1rem' }}
-                    className="rounded-2xl"
+                    playing={false}
+                    // light={item.thumbnail}
+                    config={{
+                      file: {
+                        attributes: {
+                          controlsList: 'nodownload'
+                        }
+                      }
+                    }}
                   />
                 </div>
               </div>
@@ -120,6 +127,27 @@ export default function ContentPreviewSection() {
         
         .slick-slide > div > div {
           width: 100%;
+        }
+        
+        .slick-prev, .slick-next {
+          z-index: 10;
+        }
+        
+        .slick-prev {
+          left: -40px;
+        }
+        
+        .slick-next {
+          right: -40px;
+        }
+        
+        .slick-prev:before, .slick-next:before {
+          font-size: 30px;
+          opacity: 0.75;
+        }
+        
+        .slick-prev:hover:before, .slick-next:hover:before {
+          opacity: 1;
         }
       `}</style>
     </div>
